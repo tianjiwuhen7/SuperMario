@@ -399,7 +399,7 @@ public class Main extends JFrame
 					warning.setTitle("¾¯¸æ£¡£¡£¡");
 					warning.setBounds(580, 300, 50, 50);
 					JButton bu=new JButton("Ã»ÓÐ´æµµ£¡£¡£¡");
-					bu.addActionListener(e2 -> warning.setVisible(false));
+//					bu.addActionListener(e2 -> warning.setVisible(false));
 					warning.add(bu);
 					warning.pack();
 					warning.setVisible(true);
