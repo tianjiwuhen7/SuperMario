@@ -29,6 +29,8 @@ import com.luck.tool.ImageTool;
  */
 public class Main extends JFrame 
 {
+	public Main() {
+	}
 	private static boolean default_map=false;
 	private static int step=1;
 	private static int final_line=-1;
@@ -399,8 +401,8 @@ public class Main extends JFrame
 					warning.setTitle("¾¯¸æ£¡£¡£¡");
 					warning.setBounds(580, 300, 50, 50);
 					JButton bu=new JButton("Ã»ÓÐ´æµµ£¡£¡£¡");
-//					bu.addActionListener(e2 -> warning.setVisible(false));
-					warning.add(bu);
+					bu.addActionListener(e2 -> warning.setVisible(false));
+					warning.getContentPane().add(bu);
 					warning.pack();
 					warning.setVisible(true);
 					return;
@@ -485,26 +487,26 @@ public class Main extends JFrame
 				xml=new StringBuffer();
 			}
 		});
-		setLayout(new FlowLayout());
-		add(left);
-		add(wallWithMoney);
-		add(wallWithFlower);
-		add(wallWithMushroom);
-		add(wallWithStar);
-		add(wall);
-		add(monsterl);
-		add(monsterr);
-		add(turtlel);
-		add(turtler);
-		add(money);
-		add(pipeWithFlower);
-		add(pipe);
-		add(hole);
-		add(right);
-		add(clear);
-		add(next);
-		add(load);
-		add(complete);
+		getContentPane().setLayout(new FlowLayout());
+		getContentPane().add(left);
+		getContentPane().add(wallWithMoney);
+		getContentPane().add(wallWithFlower);
+		getContentPane().add(wallWithMushroom);
+		getContentPane().add(wallWithStar);
+		getContentPane().add(wall);
+		getContentPane().add(monsterl);
+		getContentPane().add(monsterr);
+		getContentPane().add(turtlel);
+		getContentPane().add(turtler);
+		getContentPane().add(money);
+		getContentPane().add(pipeWithFlower);
+		getContentPane().add(pipe);
+		getContentPane().add(hole);
+		getContentPane().add(right);
+		getContentPane().add(clear);
+		getContentPane().add(next);
+		getContentPane().add(load);
+		getContentPane().add(complete);
 		new PaintThread().start();
 		setVisible(true);
 	}
